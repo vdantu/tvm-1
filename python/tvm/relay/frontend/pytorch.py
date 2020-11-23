@@ -2714,7 +2714,7 @@ def _run_jit_passes(graph):
     """ The inline pass is necessary to unwrap prim::CallMethod """
     import torch
 
-    if _is_version_greater_than("1.5.0"):
+    if _is_version_greater_than("1.5.1"):
         # This is required for torchvision detection models from 1.6 above
         # It is the same as _jit_pass_inline, except that it has some special
         # case behaviors for some ops such as aten::__interpolate()
